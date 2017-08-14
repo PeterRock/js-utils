@@ -30,3 +30,11 @@ function roughSizeOfObject( object ) {
     }
     return bytes;
 }
+
+/*
+* Array Pagination
+*/
+function pagination(array, pageNo, pageSize) {
+    var offset = (pageNo - 1) * pageSize;
+    return (offset + pageSize >= array.length) ? array.slice(offset, array.length) : array.slice(offset, offset + pageSize);
+}
